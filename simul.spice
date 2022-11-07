@@ -1,0 +1,22 @@
+Sim file
+
+.INCLUDE "tsmc018.lib"
+.INCLUDE "nand_referencia.spice"
+
+V1 vdd Gnd 1.8
+V2 in Gnd PULSE(0 1.8 0.0 0.1f 0.1f 0.2n 0.4n)
+
+.MEAS TRAN tphl TRIG V(in) VAL=0.9 RISE=1 
++               TARG V(out) VAL=0.9 FALL=1
+.MEAS TRAN tplh TRIG V(in) VAL=0.9 FALL=1 
++               TARG V(out) VAL=0.9 RISE=1
+
+
+.MEAS TRAN ifuente INTEG I(V1)
+
+.MEAS TRAN tpd PARAM=(tphl+tplh)/2
+.MEAS TRAN energy PARAM=-ifuente*1.8
+
+.TRAN 10p 0.3n 
+
+.end

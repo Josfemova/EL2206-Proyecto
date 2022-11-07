@@ -1,0 +1,18 @@
+* NGSPICE file created from nand_Lnx2.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 vdd in out vdd pfet w=8 l=2
++  ad=48 pd=28 as=128 ps=100
+M1001 out in a_0_n9# Gnd nfet w=4 l=4
++  ad=40 pd=36 as=16 ps=16
+M1002 a_0_n9# in out Gnd nfet w=4 l=4
++  ad=0 pd=0 as=0 ps=0
+M1003 out in vdd vdd pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 out in 0.12fF
+C1 vdd in 0.33fF
+C2 vdd out 0.58fF
+C3 out 0 0.37fF $ **FLOATING
+C4 in 0 0.42fF $ **FLOATING
+C5 vdd 0 0.55fF $ **FLOATING
