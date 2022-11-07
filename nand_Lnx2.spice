@@ -3,16 +3,19 @@
 .option scale=0.09u
 
 M1000 vdd in out vdd pfet w=8 l=2
-+  ad=48 pd=28 as=128 ps=100
++  ad=48 pd=28 as=80 ps=52
 M1001 out in a_0_n9# Gnd nfet w=4 l=4
-+  ad=40 pd=36 as=16 ps=16
-M1002 a_0_n9# in out Gnd nfet w=4 l=4
-+  ad=0 pd=0 as=0 ps=0
++  ad=20 pd=18 as=16 ps=16
+M1002 a_0_n9# in Gnd Gnd nfet w=4 l=4
++  ad=0 pd=0 as=20 ps=18
 M1003 out in vdd vdd pfet w=8 l=2
 +  ad=0 pd=0 as=0 ps=0
-C0 out in 0.12fF
-C1 vdd in 0.33fF
-C2 vdd out 0.58fF
-C3 out 0 0.37fF $ **FLOATING
-C4 in 0 0.42fF $ **FLOATING
-C5 vdd 0 0.55fF $ **FLOATING
+C0 out in 0.09fF
+C1 Gnd in 0.03fF
+C2 vdd in 0.33fF
+C3 Gnd out 0.07fF
+C4 vdd out 0.58fF
+C5 Gnd 0 0.11fF $ **FLOATING
+C6 out 0 0.26fF $ **FLOATING
+C7 in 0 0.42fF $ **FLOATING
+C8 vdd 0 0.55fF $ **FLOATING

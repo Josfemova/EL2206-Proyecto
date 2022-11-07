@@ -2,24 +2,20 @@
 
 .option scale=0.09u
 
-M1000 vdd in a_n14_7# vdd pfet w=8 l=2
+M1000 vdd in out vdd pfet w=8 l=2
 +  ad=144 pd=52 as=80 ps=52
-M1001 a_n14_7# in vdd vdd pfet w=8 l=2
+M1001 out in vdd vdd pfet w=8 l=2
 +  ad=0 pd=0 as=0 ps=0
-M1002 a_n14_7# in a_n7_n9# Gnd nfet w=4 l=2
+M1002 out in a_n7_n9# Gnd nfet w=4 l=2
 +  ad=20 pd=18 as=72 ps=44
 M1003 a_n7_n9# in Gnd Gnd nfet w=4 l=2
 +  ad=0 pd=0 as=20 ps=18
-C0 in out 0.07fF
-C1 Gnd in 0.03fF
-C2 vdd a_n14_7# 0.76fF
-C3 a_n14_7# in 0.04fF
+C0 vdd out 0.80fF
+C1 in Gnd 0.03fF
+C2 out Gnd 0.08fF
+C3 in out 0.11fF
 C4 vdd in 0.37fF
-C5 a_n14_7# out 0.01fF
-C6 a_n14_7# Gnd 0.08fF
-C7 vdd out 0.09fF
-C8 Gnd 0 0.13fF $ **FLOATING
-C9 a_n14_7# 0 0.20fF $ **FLOATING
-C10 out 0 0.08fF
-C11 in 0 0.41fF $ **FLOATING
-C12 vdd 0 0.73fF $ **FLOATING
+C5 Gnd 0 0.13fF $ **FLOATING
+C6 out 0 0.28fF $ **FLOATING
+C7 in 0 0.41fF $ **FLOATING
+C8 vdd 0 0.73fF $ **FLOATING
