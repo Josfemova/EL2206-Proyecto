@@ -1,7 +1,7 @@
 Sim file
 
 .INCLUDE "tsmc018.lib"
-.INCLUDE "nand_Wnx3.spice"
+.INCLUDE "nand_Wpnx2.spice"
 
 V1 vdd Gnd 1.8
 V2 in Gnd PULSE(0 1.8 0.05n 0.1f 0.1f 0.6n 1.2n)
